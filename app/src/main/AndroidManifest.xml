@@ -7,7 +7,7 @@
         android:label="KM & Ganhos"
         android:supportsRtl="true">
 
-        <activity android:name=".NovaCorridaActivity"/>
+        <!-- Tela principal -->
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -15,5 +15,12 @@
             </intent-filter>
         </activity>
 
+        <!-- Tela nova corrida -->
+        <activity android:name=".NovaCorridaActivity" />
+
+        <!-- Tela histórico -->
+        <activity android:name=".HistoricoActivity" />
+
     </application>
+
 </manifest>
