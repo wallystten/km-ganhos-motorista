@@ -4,6 +4,8 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
+import java.text.SimpleDateFormat
+import java.util.*
 
 class NovaCorridaActivity : AppCompatActivity() {
 
@@ -22,6 +24,16 @@ class NovaCorridaActivity : AppCompatActivity() {
 
             MainActivity.totalKm += km
             MainActivity.totalGanhos += valor
+
+            val data = SimpleDateFormat("dd/MM/yyyy HH:mm", Locale.getDefault()).format(Date())
+
+            val corrida = Corrida(
+                data = data,
+                km = km,
+                valor = valor
+            )
+
+            HistoricoManager.salvarCorrida(this, corrida)
 
             finish()
         }
