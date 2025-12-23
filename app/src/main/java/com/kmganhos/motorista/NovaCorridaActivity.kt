@@ -16,6 +16,7 @@ class NovaCorridaActivity : AppCompatActivity() {
         val btnSalvar = findViewById<Button>(R.id.btnSalvar)
 
         btnSalvar.setOnClickListener {
+
             val km = edtKm.text.toString().toDoubleOrNull() ?: 0.0
             val valor = edtValor.text.toString().toDoubleOrNull() ?: 0.0
 
